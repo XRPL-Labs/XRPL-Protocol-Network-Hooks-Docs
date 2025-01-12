@@ -33,7 +33,7 @@ _(Added by the \[Import amendment]\[].)_
 ### Error Cases
 
 * If the account is Non Activated then the `Sequence` must be 0 and the `Fee` must also be 0
-* If the account is Activated then the `Sequence` and the `Fee` are calculated the standard method.
+* If the account is Activated then the `Sequence` and the `Fee` are calculated using the standard method.
 * If the `Issuer` field is present then the `Fee` must be calculated using the standard method.
 
 ### Notes
