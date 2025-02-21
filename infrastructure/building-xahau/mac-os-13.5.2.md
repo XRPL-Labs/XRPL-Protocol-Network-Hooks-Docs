@@ -116,7 +116,7 @@ Install Boost
 
 ```
 cd $DEP_DIR && \
-wget https://boostorg.jfrog.io/artifactory/main/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz && \
+wget https://archives.boost.io/release/$BOOST_VERSION/source/$BOOST_FOLDER_NAME.tar.gz && \
 tar -xvzf $BOOST_FOLDER_NAME.tar.gz && \
 cd $BOOST_FOLDER_NAME && \
 ./bootstrap.sh && \
@@ -126,6 +126,8 @@ cd $BOOST_FOLDER_NAME && \
 Install WasmEdge
 
 ```
+# You will need to edit the CMakesList.txt to update the boost dependency url to use a new prefix
+# "https://archives.boost.io/release/" due to https://github.com/boostorg/boost/issues/843#issuecomment-2567034014
 cd $DEP_DIR && \
 wget -nc -q https://github.com/WasmEdge/WasmEdge/archive/refs/tags/$WASMEDGE_VERSION.zip && \
 unzip -o $WASMEDGE_VERSION.zip && \
